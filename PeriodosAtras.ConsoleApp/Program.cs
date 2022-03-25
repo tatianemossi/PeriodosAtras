@@ -6,31 +6,33 @@ namespace PeriodosAtras.ConsoleApp
     {
         static void Main(string[] args)
         {
-            PeriodoAtras periodo = new PeriodoAtras();
-            periodo.data = Convert.ToDateTime("23/03/2022");
-            periodo.VerificarPeriodo();
+            GerenciadorPeriodo gerenciadorPeriodo = new GerenciadorPeriodo();
+            var periodoDias = gerenciadorPeriodo.BuscarPeriodo(Convert.ToDateTime("23/03/2022"));
+            gerenciadorPeriodo.ApresentarPeriodo(periodoDias);
 
+            GerenciadorPeriodo gerenciadorPeriodo2 = new GerenciadorPeriodo();
+            periodoDias = gerenciadorPeriodo2.BuscarPeriodo(Convert.ToDateTime("22/03/2022"));
+            gerenciadorPeriodo2.ApresentarPeriodo(periodoDias);
 
-            PeriodoAtras periodo2 = new PeriodoAtras();
-            periodo2.data = Convert.ToDateTime("22/03/2022");
-            periodo2.VerificarPeriodo();
+            GerenciadorPeriodo gerenciadorPeriodo3 = new GerenciadorPeriodo();
+            periodoDias = gerenciadorPeriodo3.BuscarPeriodo(Convert.ToDateTime("17/03/2022"));
+            gerenciadorPeriodo3.ApresentarPeriodo(periodoDias);
 
+            GerenciadorPeriodo gerenciadorPeriodo4 = new GerenciadorPeriodo();
+            periodoDias = gerenciadorPeriodo4.BuscarPeriodo(Convert.ToDateTime("17/01/2022"));
+            gerenciadorPeriodo4.ApresentarPeriodo(periodoDias);
 
-            PeriodoAtras periodo3 = new PeriodoAtras();
-            periodo3.data = Convert.ToDateTime("17/03/2022");
-            periodo3.VerificarPeriodo();
+            GerenciadorPeriodo gerenciadorPeriodo5 = new GerenciadorPeriodo();
+            periodoDias = gerenciadorPeriodo5.BuscarPeriodo(Convert.ToDateTime("21/01/2022"));
+            gerenciadorPeriodo5.ApresentarPeriodo(periodoDias);
 
-            PeriodoAtras periodo4 = new PeriodoAtras();
-            periodo4.data = Convert.ToDateTime("17/01/2022");
-            periodo4.VerificarPeriodo();
+            GerenciadorPeriodo gerenciadorPeriodo6 = new GerenciadorPeriodo();
+            periodoDias = gerenciadorPeriodo6.BuscarPeriodo(Convert.ToDateTime("24/03/2012"));
+            gerenciadorPeriodo6.ApresentarPeriodo(periodoDias);
 
-            PeriodoAtras periodo5 = new PeriodoAtras();
-            periodo5.data = Convert.ToDateTime("21/01/2022");
-            periodo5.VerificarPeriodo();
-
-            PeriodoAtras periodo6 = new PeriodoAtras();
-            periodo6.data = Convert.ToDateTime("24/03/2011");
-            periodo6.VerificarPeriodo();
+            GerenciadorPeriodo gerenciadorPeriodo7 = new GerenciadorPeriodo();
+            periodoDias = gerenciadorPeriodo7.BuscarPeriodo(Convert.ToDateTime("25/03/2022 10:10:10"));
+            gerenciadorPeriodo7.ApresentarPeriodo(periodoDias);
 
             Console.ReadLine();
         }
